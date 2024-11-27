@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online OPD Registration</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url(assets/bg1.jpg) no-repeat center center/cover;
+  color: #fff;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(255, 243, 243, 0.667);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.form-group {
+  width: 28%;
+  margin-bottom: 15px;
+  margin-right: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+form .form-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit {
+  background-color: #2863a7;
+  color: #fff;
+}
+
+.reset {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.instructions {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.instructions h4 {
+  margin-bottom: 10px;
+  color: #ffd700;
+}
+
+.instructions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.instructions li {
+  margin-bottom: 5px;
+  position: relative;
+  padding-left: 15px;
+}
+
+.instructions li::before {
+  content: "•";
+  color: #ffd700;
+  position: absolute;
+  left: 0;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-header">
+      <h2>Online OPD Registration</h2>
+    </div>
+    <form id="opd-form">
+      <div class="form-group">
+        <label for="phone">Phone No</label>
+        <input type="tel" id="phone" placeholder="Please Enter Mobile No." required>
+      </div>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Full Name" required>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" value="Uttar Pradesh" readonly>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email (Optional)">
+      </div>
+      <div class="form-group">
+        <label for="aadhaar">Aadhaar No.</label>
+        <input type="text" id="aadhaar" placeholder="Aadhaar No" required>
+      </div>
+      <div class="form-group">
+        <label for="appointment">Appointment Date</label>
+        <input type="date" id="appointment" required>
+      </div>
+      <div class="form-group">
+        <label for="age">Age/DOB</label>
+        <input type="number" id="age" placeholder="Age (Years)">
+        <span>OR</span>
+        <input type="date" id="dob">
+      </div>
+      <div class="form-group">
+        <label for="guardian">Guardian</label>
+        <input type="text" id="guardian" placeholder="C/o Guardian Name">
+      </div>
+      <div class="form-group">
+        <label for="district">Department</label>
+        <select id="district" required>
+          <option value="">Select Department</option>
+          <option value="lucknow">Lucknow</option>
+          <option value="kanpur">Kanpur</option>
+          <option value="agra">Agra</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="district">Doctors</label>
+        <select id="district" required>
+          <option value="">Select Doctor</option>
+          <option value="lucknow">Lucknow</option>
+          <option value="kanpur">Kanpur</option>
+          <option value="agra">Agra</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" placeholder="Address" required></textarea>
+      </div>
+      <div class="form-buttons">
+        <button type="submit" class="btn submit">Submit</button>
+        <button type="reset" class="btn reset">Reset</button>
+      </div>
+    </form>
+    <div class="instructions">
+      <h4>Instruction:</h4>
+      <ul>
+        <li>You can do advance booking for one month only.</li>
+        <li>While choosing the department, be informed about the working days of that department.</li>
+        <li>Please take a printout of the online registration form.</li>
+        <li>Please arrive at the hospital before 12.00 PM with your referral documents.</li>
+        <li>The patient or their attendant should not stand in a queue if using Online OPD Registration.</li>
+        <li>Booking individually saves time.</li>
+      </ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

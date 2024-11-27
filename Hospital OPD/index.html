@@ -19,6 +19,16 @@
             <li class="link"><a href="#service">Services</a></li>
             <li class="link"><a href="#doctors">Our Doctors</a></li>
             <li class="link"><a href="#Team">Team</a></li>
+            <li class="link"><div class="dropdown">
+                <button class="dropbtn">Appointmnt
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="OPD.html">Book OPD Appointment</a>
+                  <a href="Online.html">Online Consultation</a>
+                </div>
+              </div>
+            </div></li>
         </ul>
         <a href="login.html"><button class="btn">Login/SignUp</button></a>
     </nav>
@@ -29,16 +39,26 @@
                 Welcome, where exceptional patient experiences are our priority. With compassionate care, state-of-the-art failities, and a paient-centered approach, 
                 we're dedicated to ypur well-being. Trust us with your health and experience the difference.
             </p>
-            <a href="#service"><button class="btn">See Services</button></a>
+            <a href="#"><button class="btn">Emergency</button></a>
         </div>
         <div class="header_form">
-            <form>
-                <h4>Book Now</h4>
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="Address">
-                <input type="text" placeholder="Phone no.">
-                <button class="btn">Book Appointment</button>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="1326f568-0e5b-43e3-9d60-952645e026bb">
+                <h4>Book Consultation</h4>
+                <input type="text" name="Patient_Name" placeholder="Patient Name">
+                <input type="email" name="email" placeholder="Enter your Email">
+                <!-- <input type="text" placeholder="Address"> -->
+                <div class="custom-select" style="width:200px;">
+                    <select style="width: 285px; height: 50px; border-radius: 5px; color: #12ac8e; border: transparent;" name="department">
+                      <option value="0">Department</option>
+                      <option value="Cardio">Cardio</option>
+                      <option value="Gastro">Gastro</option>
+                      <option value="Ortho">Ortho</option>
+                      <option value="Gynae">Gynae</option>
+                    </select>
+                  </div>
+                <input type="text" name="phone" placeholder="Phone no.">
+                <button class="btn">Submit</button>
             </form>
         </div>
     </div>
@@ -81,6 +101,14 @@
                 <p>
                     Experience comprehensive oral care with Dentistry. Trust us to keep
                     your smile healthy and bright.
+                </p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="service_card">
+                <span><i class="ri-microscope-line"></i></span>
+                <h4>Beds Availability</h4>
+                <p>
+                    Real time information on which beds are Vacant, Reserved or Occupied.
                 </p>
                 <a href="#">Learn More</a>
             </div>
@@ -338,7 +366,7 @@
         </div>
         <div class="footer_bar">
             <div class="footer_bar_content">
-                <p>Copyright @ 2024 College Project . All rights reserved.</p>
+                <p>Copyright @ 2024 #College Project . All rights reserved.</p>
                 <div class="footer_socials">
                     <span><i class="ri-instagram-line"></i></span>
                         <span><i class="ri-facebook-fill"></i></span>

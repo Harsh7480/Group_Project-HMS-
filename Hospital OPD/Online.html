@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Doctors</title>
+  <style>
+    /* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+}
+
+.navbar li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.navbar .active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.navbar .explore {
+  color: #28a745;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  padding: 10px 20px;
+  background-color: #e9ecef;
+  font-size: 14px;
+}
+
+/* Find Doctors Section */
+.find-doctors {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.find-doctors h2 {
+  margin-bottom: 15px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.search-bar input,
+.search-bar select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.most-searched {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.most-searched button {
+  border: 1px solid #007bff;
+  color: #007bff;
+  background: transparent;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Appointment Form */
+.appointment-form {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-form h3 {
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icon-btn {
+  background: #f8f9fa;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Info Section */
+.info-section {
+  padding: 20px;
+}
+
+.contact, .how-it-works {
+  margin-bottom: 20px;
+}
+
+.how-it-works button {
+  background: #f8f9fa;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  padding-left: 10px;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  color: #007bff;
+  position: absolute;
+  left: 0;
+}
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <nav>
+      <ul>
+        <li>Buy Medicines</li>
+        <li class="active">Find Doctors</li>
+        <li>Lab Tests</li>
+        <li>Circle Membership</li>
+        <li>Health Records</li>
+        <li>Diabetes Reversal</li>
+        <li>Health Insurance</li>
+        <li class="explore">Explore</li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="breadcrumb">
+      <span>Home</span> &gt; <span>Specialities</span>
+    </div>
+
+    <section class="find-doctors">
+      <h2>Find Doctors</h2>
+      <div class="search-bar">
+        <select>
+          <option value="all-cities" selected>All Cities</option>
+        </select>
+        <input type="text" placeholder="Search Doctors, Specialties, Symptoms, Hospitals etc.">
+      </div>
+      <div class="most-searched">
+        <span>Most Searched Cities:</span>
+        <button>New Delhi</button>
+        <button>Hyderabad</button>
+        <button>Chennai</button>
+        <button>Kolkata</button>
+        <button>Mumbai</button>
+        <button>Bangalore</button>
+        <button>All Cities</button>
+      </div>
+    </section>
+
+    <section class="appointment-form">
+      <h3>Book an Appointment in 3 Simple Steps</h3>
+      <form>
+        <div class="form-group">
+          <label for="location">Preferred Location/Pincode*</label>
+          <div class="input-group">
+            <input type="text" id="location" placeholder="Search location" required>
+            <button class="icon-btn">📍</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="date">Select Date*</label>
+          <input type="date" id="date" value="2024-11-24" required>
+        </div>
+        <div class="form-group">
+          <label for="speciality">Select Speciality*</label>
+          <select id="speciality" required>
+            <option value="" disabled selected>Enter Speciality</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="neurology">Neurology</option>
+            <option value="orthopedics">Orthopedics</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+      </form>
+    </section>
+
+    <aside class="info-section">
+      <div class="contact">
+        <h4>Why Apollo247</h4>
+        <p>Round-the-clock doctor availability</p>
+        <p>Broad range of Specialities</p>
+        <p>Order medicines & tests online</p>
+        <p>Digitised health records</p>
+      </div>
+      <div class="how-it-works">
+        <h4>How Doctor Consultation Works</h4>
+        <button>Text/Audio/Video</button>
+        <button>Meet in Person</button>
+        <p>HOW TO CONSULT A DOCTOR ONLINE VIA TEXT/AUDIO/VIDEO?</p>
+        <ul>
+          <li>Choose the doctor</li>
+          <li>Book a slot</li>
+          <li>Make payment</li>
+          <li>Be present in the consult room on Apollo247.com at the time of consult</li>
+        </ul>
+      </div>
+    </aside>
+  </main>
+</body>
+</html>
